@@ -20,18 +20,25 @@ To create a Python program for printing `n` natural numbers using a `for` loop.
 
 ### 🧾 Program
 
-```python
-#Reg.NO
-#Name
-#Write your Code here
+```
+#Reg.NO: 212224230289
+#Name: THARUN R
+
+r=int(input())
+for a in range(2,r+1):
+    k=0
+    for i in range(2,a//2+1):
+        if(a%i==0):
+            k=k+1
+    if(k<=0):
+        print(a)
+
 
 ```
 ### OUTPUT
-```
+![image](https://github.com/user-attachments/assets/b29de33e-9cbb-49f2-a866-a05d45ac4b76)
 
-```
+
 ### RESULT
-```
 
-```
-
+Thus the Python program for printing all prime numbers within a given range was syccessfully created.
