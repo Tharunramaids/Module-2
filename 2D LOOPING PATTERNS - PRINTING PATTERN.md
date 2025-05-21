@@ -1,36 +1,55 @@
-# Exp.No:2d
-## LOOPING PATTERNS - PRINTING PATTERN
-
----
+# Exp.No:9
+## LOOPING PATTERNS - PRINTING PASCAL TRIANGLE PATTERN
 
 ### AIM  
-To write a Python program to print a triangular star pattern using loops.
 
----
+To write a Python program to build pascal triangle using numbers .Get the number of rows as input .
 
 ### ALGORITHM
 
 1. Begin the program.  
-2. Read the integer `n` from the user using `input()`. This will determine the number of rows in the pattern.  
-3. Initialize a variable `i = 0`. This will help adjust the spacing before the stars.  
-4. Loop through rows from `0` to `n - 1`:  
-   - For each row, calculate the number of spaces to print using the formula: `((n - rows - 1) * 2) + i`.  
-   - Print the calculated number of spaces using `print(" ", end="")`.  
-   - Increment `i` by 1 after each row.  
-   - Print stars using a nested loop: the number of stars in each row is `rows + 1`, printed using `print("*", end="  ")`.  
-   - Print a newline after each row using `print("")` to move to the next line.  
+2. Input number of rows (rows).
+3. For each row i from 0 to rows - 1:
+   For each position j from 0 to i:
+     Calculate the binomial coefficient (nCr) using decide_number(i, j):
+       Set num = 1.
+       If k > n - k, set k = n - k.
+       For i from 0 to k - 1, update num = num * (n - i) // (i + 1).
+       Print the number.
+4. Move to the next line after printing all numbers in the row.
 5. Terminate the program.
-
----
 
 ### PROGRAM
 ```
-#Reg.No:
-#Name:
-#Add Your Code Here
+#Reg.No: 212224230289
+#Name: THARUN R
+
+def print_pascal_triangle(size):
+    for i in range(0, size):
+        for j in range(0, i + 1):
+            print(decide_number(i, j), end=" ")
+        print()
+
+
+def decide_number(n, k):
+    num = 1
+    if k > n - k:
+        k = n - k
+    for i in range(0, k):
+        num = num * (n - i)
+        num = num // (i + 1)
+    return num
+
+# set rows
+rows = int(input())
+print_pascal_triangle(rows)
 
 ```
 
 ### OUTPUT
 
+![image](https://github.com/user-attachments/assets/a6c23aae-f81d-4a6e-9b90-d3033a31dff8)
+
 ### RESULT
+
+Thus the a Python program to build pascal triangle using numbers was successfully created.
