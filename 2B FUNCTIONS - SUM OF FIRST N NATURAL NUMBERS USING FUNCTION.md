@@ -18,8 +18,8 @@ To write a Python program to find the sum of first N Natural Numbers using funct
 
 ### PROGRAM
 ```
-#Reg.No: 212222220044
-#Name: SHRUTHI S
+#Reg.No: 212224230289
+#Name: THARUN R
 
 def sum(n):
     sum1 = 0
